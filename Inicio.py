@@ -40,5 +40,8 @@ Prepárate para descubrir, aprender y interactuar de manera que transformará co
 """)
 
 
+st.markdown("---")
+container = st.container(border=True)
+container.page_link("pages/01_📑_Prefacio.py", label="Click aquí para Continuar ...", icon="👉")
 
 
