@@ -1,14 +1,24 @@
 import streamlit as st
 
+
 st.set_page_config(
     page_title="Conceptos Técnicos Clave en IA",
-    page_icon="🤖"
+    page_icon="😊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.aulasimple.ai',
+        'Report a bug': "https://www.aulasimple.ai",
+        'About': "### Desarrollador por aulasimple.ai"
+    }
 )
+
+
 
 
 st.markdown(
     """
-    # Conceptos Técnicos Clave en IA
+    # Sobre este ebook
 """
 )
 
@@ -16,29 +26,19 @@ st.markdown("### 😊 Bienvenda")
 
 st.markdown("""
 
-Soy Patricio.  
-Apasionado de la inteligencia artificial, educación y marketing.
+Bienvenido a una experiencia revolucionaria en la lectura. 
 
-Este libro te revela cinco claves esenciales.  
-Usaremos la tecnología para enriquecer tus libros digitales.
+Aquí no solo lees; también tienes la oportunidad de escuchar el contenido y de interactuar directamente con él.
+         
+Este diálogo interactivo enriquece tu comprensión y te permite explorar el tema con mayor profundidad.
 
-Exploraremos herramientas avanzadas.  
-Podrás crear contenido educativo y promocional.  
-Todo gracias a la inteligencia artificial.
+Los beneficios de este enfoque son múltiples: 
+            
+Desde la mejora en la retención hasta lograr el personalizar el aprendizaje.
 
-Aprenderás rápidamente.  
-Todo de manera que cualuier persona lo entienda.
-
-Prepárate para una revolución.  
-Tecnología y creatividad unidas.  
-Transformaremos cómo construimos libros digitales.
-
-¡Comencemos este emocionante viaje juntos!
+Prepárate para descubrir, aprender y interactuar de manera que transformará completamente tu experiencia de lectura.
 """)
 
 
-container = st.container(border=True)
-container.page_link("pages/01_📑_Introducción.py", label="Click aquí para Continuar ...", icon="👉")
-            
 
 
