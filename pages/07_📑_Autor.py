@@ -25,6 +25,5 @@ Transformaremos cómo construimos libros digitales.
 
 st.markdown("---")
 st.image('patricio_bustamante.png', caption='Patricio Bustamante' , width = 120)
-
-
+st.markdown("[Vista Aula Simple AI, para más información](https://aulasimple.ai/)")
 
