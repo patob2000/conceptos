@@ -4,7 +4,7 @@ import streamlit as st
 
 st.markdown("""
 
-Soy Patricio.
+## Soy Patricio.
 Apasionado de la inteligencia artificial, la educación y el marketing.
 
 Este libro te reveló claves esenciales.

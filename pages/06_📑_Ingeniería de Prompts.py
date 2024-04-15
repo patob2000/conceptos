@@ -1,4 +1,17 @@
 import streamlit as st
+import streamlit_shadcn_ui as ui
+from funciones import procesar_solicitud_openai, procesar_solicitud_anthropic
+import time
+import numpy as np
+
+
+_LOREM_IPSUM = ""
+
+
+def stream_data():
+    for word in _LOREM_IPSUM.split(" "):
+        yield word + " "
+        time.sleep(0.02)
 
 
 st.title("⚙️ Ingeniería en prompt")
@@ -46,3 +59,44 @@ Te convierte en un verdadero innovador literario 🌟.
 
             """)
 
+
+
+
+st.markdown("""  
+---      
+### FAQ Interactivas
+            """)
+
+choice = st.selectbox(
+    '¿Quieres sabe más ...?',
+    ('Selecciona alguna pregunta frecuente...',
+     'Explícame la Ingeniería en Prompt en los modelos llm, cómo si yo fuera un niño', 
+     '¿Qué es la Ingeniería en Prompt y cómo afecta la generación de texto?', 
+     "Cuéntame algo al estilo \"Ripley's Believe It or Not ...\" relacioando con la Ingeniería en Prompt",
+     "Una tabla con otros temas con Notación Markdown relacionados y su definición",
+    ))
+
+#st.markdown(f"Currrent value: {choice}")
+if choice != "Selecciona alguna pregunta frecuente...":
+    system = """
+    Eres un asistente que responde solo preguntas y realiza aportes relacionadas estrechamente con *Inteligencia Artificial* y *Ingeniería en Prompt en los modelos llm* en el ambito de la escritura de libros digitales.  
+    Tus respuestas debe ser muy fáciles de comprender para personas que no tienen conocimiento técnico. 
+    Utiliza negritas, listas y/o tablas, lo que necesites para hacer el texto mas legible y atractivo.
+    Si la pregunta del usuario comienza con "Qué" ó "Cuales" utiliza analogías para responder.
+    *No ofrescas ayuda adicional, solo responde lo solicitado*.
+    """
+    with st.spinner("espera ..."):
+        # respuesta = procesar_solicitud_openai(system, choice)
+        respuesta = procesar_solicitud_anthropic(system, choice)
+        with st.chat_message("assistant"):
+            #st.write(respuesta)
+            _LOREM_IPSUM = respuesta
+            st.write_stream(stream_data)
+
+
+
+
+
+st.markdown("---")
+container = st.container(border=True)
+container.page_link("pages/07_📑_Autor.py", label="Click aquí para Continuar ...", icon="👉")

@@ -89,8 +89,7 @@ if choice != "Selecciona alguna pregunta frecuente...":
             st.write_stream(stream_data)
 
 
-
-
+st.markdown("---")
 container = st.container(border=True)
 container.page_link("pages/03_📑_Límite de Tokens.py", label="Click aquí para Continuar ...", icon="👉")
 
