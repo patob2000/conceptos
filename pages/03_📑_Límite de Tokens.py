@@ -99,3 +99,7 @@ if choice != "Selecciona alguna pregunta frecuente...":
 st.markdown("---")
 container = st.container(border=True)
 container.page_link("pages/04_📑_Alucinaciones.py", label="Click aquí para Continuar ...", icon="👉")
+
+
+st.write("---")
+st.caption("Creado con [www.aulasimple.ia](https://aulasimple.ai/plataforma)")

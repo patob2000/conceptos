@@ -50,3 +50,6 @@ para que puedas crear no solo un buen e-book, sino una obra que realmente resalt
 st.markdown("---")
 container = st.container(border=True)
 container.page_link("pages/02_📑_Ventana de Contexto.py", label="Click aquí para Continuar ...", icon="👉")
+
+st.write("---")
+st.caption("Creado con [www.aulasimple.ia](https://aulasimple.ai/plataforma)")

@@ -103,3 +103,5 @@ container.page_link("pages/03_📑_Límite de Tokens.py", label="Click aquí par
 #        _LOREM_IPSUM = respuesta
 #        st.write_stream(stream_data)
 
+st.write("---")
+st.caption("Creado con [www.aulasimple.ia](https://aulasimple.ai/plataforma)")
